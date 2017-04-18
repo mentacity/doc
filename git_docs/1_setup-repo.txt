@@ -1,0 +1,25 @@
+Install Git for you OS first.
+
+Open a command line prompt or terminal and issue the following commands:
+git config --global user.name <name>
+git config --global user.email <email>
+
+
+Next set up a repository.
+
+1a. Inside an existing directory.
+git init
+
+
+1b. Inside a specified directory
+git init <directory>
+example: git init ~/dave/code
+         git init c:\code
+
+1c. Create a shared repository. Directory name should end by convention with .git
+git init --bare <directory>
+example: git init --bare ~/dave/code.git
+         git init --bare c:\code.git
+
+
+
