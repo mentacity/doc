@@ -21,5 +21,14 @@ git init --bare <directory>
 example: git init --bare ~/dave/code.git
          git init --bare c:\code.git
 
+2. Inside your working directory to add all existing files
+git add .
+
+3. Files are staged but need to be committed. Do so by:
+git commit -m "your commit message"
+
+
+
+
 
 
