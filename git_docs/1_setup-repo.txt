@@ -27,6 +27,14 @@ git add .
 3. Files are staged but need to be committed. Do so by:
 git commit -m "your commit message"
 
+4. Now you need to add the bare repository as an origin to you local project repository
+git remote add <path/to/bare/repo>
+
+5. We are ready not to our directory upstream to the bare repository. This populates it with our project files.
+git push -u origin master
+
+6. Now you have accomplished two things. First, git is providing version control of your project. Second, git is holding a backup of you project and the version control inside a bare repository elsewhere on your drive. 
+
 
 
 
