@@ -1,0 +1,5 @@
+Nodejs installed from Debian packages installs as nodejs and not plain node.
+Without changes, invoking node requires using the command nodejs.
+
+To make node play well with other tools such as Gulp, add a simlink:
+ln -s /usr/bin/nodejs /usr/bin/node

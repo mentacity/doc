@@ -1,0 +1,6 @@
+# commit process
+
+1. edit and save a file
+2. git add <filename>
+3. git commit -m "your commit message"
+4a. git push -u origin master
