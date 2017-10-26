@@ -118,14 +118,14 @@ Today
 - Ensure you can login to your new user with the SSH key
 	From the local machine ssh [seconduser]@[your_server_ip]
 - Disable the root login
-	vi /etc/ssh/sshd_config
-	find this line
-	#PermitRootLogin yes
-	remove the # which makes this line active
-	change yes to no
-	Enter :x then ENTER to save and exit the file
-	reload ssh with this command:
-	systemctl reload sshd
+	- vi /etc/ssh/sshd_config
+	- find this line
+	- #PermitRootLogin yes
+	- remove the # which makes this line active
+	- change yes to no
+	- Enter :x then ENTER to save and exit the file
+	- reload ssh with this command:
+	- systemctl reload sshd
 ---
 
 ## Part III Install Apache, MySQL, and Php
