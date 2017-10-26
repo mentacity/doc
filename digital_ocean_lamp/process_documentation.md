@@ -97,9 +97,26 @@ Today
 - exit vi without saving
 
 ### Create SSH Keys Locally and Install Public Key on the server
-- Create SSH keys locally
-- Copy the public to your new server
+- Create SSH keys locally (if you already have keys created skip this step)
+    - on your local computer from the terminal run
+    - ssh-keygen
+- Copy the public key to your new server
+	- either automatically with 
+		- ssh-copy-id <username>@<server_ip_address (you will be prompted for the password)
+	- or manually by using the terminal of the local machine and
+		- run: cat ~/.ssh/id_rsa.pub
+		- copy the text (this is your public key) to your clipboard
+		- login to the remote server as root
+		- su to the second user (su - jimbo) for example if jimbo is the user you created 
+		- run the following commands
+			    mkdir .ssh
+				chmod 700 .ssh
+				vi .ssh/authorized_keys
+				Enter :x then ENTER to save and exit the file.
+				chmod 600 .ssh/authorized_keys
+				exit
 - Ensure you can login to your new user with the SSH key
+	From the local machine ssh <seconduser>@<your_server_ip>
 - Disable the root login
 ---
 
