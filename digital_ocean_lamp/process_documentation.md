@@ -7,11 +7,19 @@ Today
 
 ### Create a Local Git Repo
 - Create a new repo on your laptop called docs
-- Inside docs start a textfile called lamp_server_setup.md
+	1. Create a folder called docs
+	2. cd to docs
+	3. run the command: git init to initialize the repository
+	4. copy this document into the repo
+	5. run: git status
+	6. run: git add *
+	7. run: git commit -m "First commit with lab guide"
 ---
 
 ### Create a New GitHub Repository Called lamp_server_setup
 - Make sure the repository is created empty
+- Copy the url of the new GitHub repo
+   1. 
 ---
 
 ### Connect Your Local Repo To Your GitHub Repo
@@ -22,6 +30,7 @@ Today
 ### Check Your GitHub Repo
 - create a new directory elsewhere called test_lamp
 - git clone <path_to_your_repo]
+- does your new directory contain 
 ---
 
 ### Demo to Instructor Part I is complete
