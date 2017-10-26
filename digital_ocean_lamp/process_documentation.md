@@ -35,16 +35,16 @@ Today
 			3. Copy the URL of the repository  
 			4. git remote add origin http://pathto/lamp_server_setup.git
 			5. git push -u origin master
-
 ---
 
 ### Check Your GitHub Repo
 - create a new directory elsewhere called test_lamp
 - git clone <path_to_your_repo]
-- does your new directory contain 
+- does your new directory contain the same files as your local repo?
+- if so then you have successfully completed part I
 ---
 
-### Demo to Instructor Part I is complete
+### Demo to Instructor that Part I is complete
 
 ## Part II Setup an Image in the Cloud (Digital Ocean Droplet)
 - Guide: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7
@@ -52,8 +52,24 @@ Today
 
 ### Create a Droplet and Reset the Root Password
 - Create a new droplet
+	- Sign in to Digital Ocean
+	- Click Droplets in the menu at the top left
+	- Click the green Create button in the top right
+	- Select Droplet
+	- From the create droplet screen choose your OS -- we are using CentOS 7
+	- Choose a size: you can use the lowest resource droplet @ 5/month
+	- Skip the rest of the options except for hostname
+	- I used cent512-base
+	- Check email for message from Digital Ocean containing root password for new server
+	- Copy the root password and IP address into a text file
+	
+	
 - Use SSH to login as root (use the emailed root password)
+	- ssh root@<your_server_ip_address>
 - Change the root password
+	- enter the old password
+	- enter the new password
+	- enter the new password a second time to confirm
 - Write down the root password
 - Confirm to instructor you can log in and out with the root password
 ---
