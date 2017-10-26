@@ -43,7 +43,7 @@ Today
 
 ### Check Your GitHub Repo
 - create a new directory elsewhere called test_lamp
-- git clone <path_to_your_repo]
+- git clone [path_to_your_repo]
 - does your new directory contain the same files as your local repo?
 - if so then you have successfully completed part I
 ---
@@ -69,7 +69,7 @@ Today
 	
 	
 - Use SSH to login as root (use the emailed root password)
-	- ssh root@<your_server_ip_address>
+	- ssh root@[your_server_ip_address]
 - Change the root password
 	- enter the old password
 	- enter the new password
@@ -80,8 +80,8 @@ Today
 
 ### Add a Second User
 - Add a second user and set the password 
-- adduser <username> 
-- passwd <username>
+- adduser [username] 
+- passwd [username]
 - write down the username and password
 - logout and back in to test the username
 ---
@@ -90,7 +90,7 @@ Today
 - from second user account:
 - su root
 - enter the root password
-- run: gpasswd -a <second_user_name> wheel
+- run: gpasswd -a [second_user_name] wheel
 - run: exit
 - run: sudo vi file.txt
 - if vi runs, your second user has sudo access
@@ -102,7 +102,7 @@ Today
     - ssh-keygen
 - Copy the public key to your new server
 	- either automatically with 
-		- ssh-copy-id <username>@<server_ip_address (you will be prompted for the password)
+		- ssh-copy-id [username]@[server_ip_address] (you will be prompted for the password)
 	- or manually by using the terminal of the local machine and
 		- run: cat ~/.ssh/id_rsa.pub
 		- copy the text (this is your public key) to your clipboard
@@ -116,8 +116,16 @@ Today
 				chmod 600 .ssh/authorized_keys
 				exit
 - Ensure you can login to your new user with the SSH key
-	From the local machine ssh <seconduser>@<your_server_ip>
+	From the local machine ssh [seconduser]@[your_server_ip]
 - Disable the root login
+	vi /etc/ssh/sshd_config
+	find this line
+	#PermitRootLogin yes
+	remove the # which makes this line active
+	change yes to no
+	Enter :x then ENTER to save and exit the file
+	reload ssh with this command:
+	systemctl reload sshd
 ---
 
 ## Part III Install Apache, MySQL, and Php
