@@ -36,6 +36,7 @@ Today
 			4. git remote add origin http://pathto/lamp_server_setup.git
 			5. git push -u origin master
 	- Note: git can be setup to automatically login with a push
+	- With https it can be set to only ask for a password ever 8 hours, for example
 ---
 
 ### Check Your GitHub Repo
