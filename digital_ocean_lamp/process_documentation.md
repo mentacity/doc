@@ -100,6 +100,13 @@ Today
 - Create SSH keys locally (if you already have keys created skip this step)
     - on your local computer from the terminal run
     - ssh-keygen
+    - ssh-keygen should set folder permissions for ~/.ssh correctly but for reference:
+	- Local .ssh folder permissions should be
+		- chmod 700 .ssh 
+		- chmod 644 id_rsa.pub 
+		- Your private key (id_rsa) should be 600 (-rw-------)
+---
+		
 - Copy the public key to your new server
 	- either automatically with 
 		- ssh-copy-id [username]@[server_ip_address] (you will be prompted for the password)
@@ -169,11 +176,50 @@ Today
 - Using the terminal shutdown your server
 - Using the Digital Ocean Interface Create a Snapshot of Your Server
 - Name it LAMPwithKeys
+- Create a new droplet using the existing snapshot
+- Your ssh key and second user will work but you will still have to use the 
+  password sent in the email for root and set a new password on first root login
 ---
 
 ## Part V Install Wordpress
 - Guide: https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-centos-7
-- Do you need wget ? yum install wget
+- mysql -u root -p
+- CREATE DATABASE wordpress;
+- CREATE USER wordpressuser@localhost IDENTIFIED BY 'password';
+- GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost IDENTIFIED BY 'password';
+- FLUSH PRIVILEGES
+- exit
+- install a php module to allow WP to resize images
+- sudo yum update
+- sudo yum install php-gd
+- sudo service httpd restart
+- sudo yum wget
+- cd ~
+- wget http://wordpress.org/latest.tar.gz
+- tar xzvf latest.tar.gz
+- sudo rsync -avP ~/wordpress/ /var/www/html/
+- mkdir /var/www/html/wp-content/uploads
+- sudo chown -R apache:apache /var/www/html/*
+- cd /var/www/html
+- cp wp-config-sample.php wp-config.php
+- nano wp-config.php
+- Fill in the values of these parameters with the information for the database that you created. It should look like this:
+
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define('DB_NAME', 'wordpress');
+
+/** MySQL database username */
+define('DB_USER', 'wordpressuser');
+
+/** MySQL database password */
+define('DB_PASSWORD', 'password');
+- navigate to the wordpress setup wizard
+- http://server_domain_name_or_IP
+- finish setup
+- login as admin http://server_domain_name_or_IP/wp-admin
+
+Do you need wget ? yum install wget
 - Test Wordpress
 - Create Another Snapshot call it WordPressImage
 ---
