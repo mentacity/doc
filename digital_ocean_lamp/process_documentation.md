@@ -37,8 +37,8 @@ Today
 			5. git push -u origin master
 	- Note: git can be setup to automatically login with a push
 	- With https it can be set to only ask for a password ever 8 hours, for example
-	- git config --global remote.origin.url https://{username}@github.com/{username}/{repo_name}
-	
+		- git config --global remote.origin.url https://{username}@github.com/{username}/{repo_name}
+	    - git config --global credential.helper 'cache --timeout=28000'
 ---
 
 ### Check Your GitHub Repo
@@ -80,10 +80,21 @@ Today
 
 ### Add a Second User
 - Add a second user and set the password 
-- adduser <username> passwd <username>
+- adduser <username> 
+- passwd <username>
 - write down the username and password
-- login and backout to test the username
+- logout and back in to test the username
 ---
+
+### Add second user to sudoers (ability to run admin functions)
+- from second user account:
+- su root
+- enter the root password
+- run: gpasswd -a <second_user_name> wheel
+- run: exit
+- run: sudo vi file.txt
+- if vi runs, your second user has sudo access
+- exit vi without saving
 
 ### Create SSH Keys Locally and Install Public Key on the server
 - Create SSH keys locally
