@@ -128,14 +128,41 @@ Today
 	- systemctl reload sshd
 ---
 
-## Part III Install Apache, MySQL, and Php
+## Part III Install Apache, MySQL (MariaDB), and Php
 - Guide: https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-centos-7
 - Install Apache with yum
-- Install MySQL with yum
+	- sudo yum update
+	- sudo yum install httpd
+	- sudo systemctl start httpd.service
+- Test apache by opening your browser and navigating to:
+	- http://your_server_IP_address/
+- Enable Apache to start automatically at boot
+	- sudo systemctl enable httpd.service
+- Install MariaDB with yum
+	- sudo yum update
+    - sudo yum install mariadb-server mariadb
+    - sudo systemctl start mariadb
+    
 - Secure your MySQL installation
+	-sudo mysql_secure_installation
+	- you will be prompted for the default password: it should be blank
+	- press enter
+	- set a new password for the MariaDB root user (this is the db root user, not the machine root user)
+	- press enter to answer Y to all the followup questions (answering yes to these questions increases security of the DB)
+	- add automatic startup of MariaDB at boot by typing:
+	- sudo systemctl enable mariadb.service
+	 
 - Install a base Php (you do not have to install the addtional modules)
+	- sudo yum install php php-mysql
+	- restart Apache by typing:
+	- sudo systemctl restart httpd.service
+	
 - You should not have to configure the firewall
 - Create Hello World php script (hw.php)
+	- sudo vi /var/www/html/info.php
+	- press i to insert into the file
+	- add <?php phpinfo(); ?> into the file
+	- press :x to save
 ---
 
 ## Part IV Creating a Snapshot of your image
