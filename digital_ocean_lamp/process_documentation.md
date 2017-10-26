@@ -35,6 +35,7 @@ Today
 			3. Copy the URL of the repository  
 			4. git remote add origin http://pathto/lamp_server_setup.git
 			5. git push -u origin master
+	- Note: git can be setup to automatically login with a push
 ---
 
 ### Check Your GitHub Repo
