@@ -14,17 +14,28 @@ Today
 	5. run: git status
 	6. run: git add *
 	7. run: git commit -m "First commit with lab guide"
----
+--- 
 
 ### Create a New GitHub Repository Called lamp_server_setup
-- Make sure the repository is created empty
-- Copy the url of the new GitHub repo
-   1. 
----
+- Under repositorys click the New button which is green
+- Give the repository a name
+- Select Public or Private (public by default, private requires subscription)
+- Either
+	- Create with a readme and clone the repository
+		- Create with readme
+		- Copy the url of the new GitHub repo by clicking the Clone or Download green button
+		- On your local computer change directories to the folder where you want to store your repo
+		- run: git clone <http://my.repo.address>
+		- This copies your remote repository to a local repo
+		- Your local cloned repository will be set to use Github as a remote
+	- Create an empty repository with a readme
+		 - Copy the url of the new GitHub repo
+			1. Click the link of your repository at the top of the page
+			2. Click the Clone or Download green button
+			3. Copy the URL of the repository  
+			4. git remote add origin http://pathto/lamp_server_setup.git
+			5. git push -u origin master
 
-### Connect Your Local Repo To Your GitHub Repo
-- git remote add origin http://pathto/lamp_server_setup.git
-- git push -u origin master
 ---
 
 ### Check Your GitHub Repo
@@ -90,7 +101,12 @@ Today
 - Create a final snapshot called WPwithEncryption
 ---
 
-## Part VII
+## Part VII Initialize the Web Directory as a Git Repo
+- Make sure git is installed by typing the git command (you will get options if installed)
+- If git is not installed, install it
+- 
+
+## Part VIII
 - Create a new droplet based on your final snapshot 
 - Test your WordPress and Encryption by browsing to https://your_ip_address
 ---
