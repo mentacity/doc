@@ -37,6 +37,8 @@ Today
 			5. git push -u origin master
 	- Note: git can be setup to automatically login with a push
 	- With https it can be set to only ask for a password ever 8 hours, for example
+	- git config --global remote.origin.url https://{username}@github.com/{username}/{repo_name}
+	
 ---
 
 ### Check Your GitHub Repo
