@@ -36,7 +36,7 @@ Today
 			4. git remote add origin http://pathto/lamp_server_setup.git
 			5. git push -u origin master
 	- Note: git can be setup to automatically login with a push
-	- With https it can be set to only ask for a password ever 8 hours, for example
+	- With https it can be set to only ask for a password every 8 hours, for example
 		- git config --global remote.origin.url https://{username}@github.com/{username}/{repo_name}
 	    - git config --global credential.helper 'cache --timeout=28000'
 ---
@@ -80,19 +80,19 @@ Today
 
 ### Add a Second User
 - Add a second user and set the password 
-- adduser [username] 
-- passwd [username]
+	adduser [username] 
+	passwd [username]
 - write down the username and password
 - logout and back in to test the username
 ---
 
 ### Add second user to sudoers (ability to run admin functions)
 - from second user account:
-- su root
+	su root
 - enter the root password
-- run: gpasswd -a [second_user_name] wheel
-- run: exit
-- run: sudo vi file.txt
+	gpasswd -a [second_user_name] wheel
+	exit
+	sudo vi file.txt
 - if vi runs, your second user has sudo access
 - exit vi without saving
 
@@ -183,37 +183,38 @@ Today
 
 ## Part V Install Wordpress
 - Guide: https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-centos-7
-- mysql -u root -p
-- CREATE DATABASE wordpress;
-- CREATE USER wordpressuser@localhost IDENTIFIED BY 'password';
-- GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost IDENTIFIED BY 'password';
-- FLUSH PRIVILEGES
-- exit
+	mysql -u root -p
+	CREATE DATABASE wordpress;
+	CREATE USER wordpressuser@localhost IDENTIFIED BY 'password';
+	GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost IDENTIFIED BY 'password';
+	FLUSH PRIVILEGES
+	exit
 - install a php module to allow WP to resize images
-- sudo yum update
-- sudo yum install php-gd
-- sudo service httpd restart
-- sudo yum wget
-- cd ~
-- wget http://wordpress.org/latest.tar.gz
-- tar xzvf latest.tar.gz
-- sudo rsync -avP ~/wordpress/ /var/www/html/
-- mkdir /var/www/html/wp-content/uploads
-- sudo chown -R apache:apache /var/www/html/*
-- cd /var/www/html
-- cp wp-config-sample.php wp-config.php
-- nano wp-config.php
+	sudo yum update
+	sudo yum install php-gd
+	sudo service httpd restart
+	sudo yum wget
+	cd ~
+	wget http://wordpress.org/latest.tar.gz
+	tar xzvf latest.tar.gz
+	sudo rsync -avP ~/wordpress/ /var/www/html/
+	mkdir /var/www/html/wp-content/uploads
+	sudo chown -R apache:apache /var/www/html/*
+	cd /var/www/html
+	cp wp-config-sample.php wp-config.php
+	nano wp-config.php
 - Fill in the values of these parameters with the information for the database that you created. It should look like this:
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'wordpress');
+	// ** MySQL settings - You can get this info from your web host ** //
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'wordpress');
 
-/** MySQL database username */
-define('DB_USER', 'wordpressuser');
+	/** MySQL database username */
+	define('DB_USER', 'wordpressuser');
 
-/** MySQL database password */
-define('DB_PASSWORD', 'password');
+	/** MySQL database password */
+	define('DB_PASSWORD', 'password');
+
 - navigate to the wordpress setup wizard
 - http://server_domain_name_or_IP
 - finish setup
