@@ -1,4 +1,3 @@
-Today
 # Document a LAMP setup and Save the Image
 ---
 
@@ -8,8 +7,8 @@ Today
 ### Create a Local Git Repo
 - Create a new repo on your laptop called docs
 	- Create a folder called docs
-	```
-    cd docs
+	  ```
+		cd docs
     git init to initialize the repository
     copy this document into the repo
     git status
