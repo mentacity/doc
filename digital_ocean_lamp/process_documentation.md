@@ -7,13 +7,13 @@ Today
 
 ### Create a Local Git Repo
 - Create a new repo on your laptop called docs
-	1. Create a folder called docs
-	2. cd to docs
-	3. run the command: git init to initialize the repository
-	4. copy this document into the repo
-	5. run: git status
-	6. run: git add *
-	7. run: git commit -m "First commit with lab guide"
+	- Create a folder called docs
+	`cd docs
+	git init to initialize the repository
+	copy this document into the repo
+	git status
+	git add *
+	git commit -m "First commit with lab guide"`
 --- 
 
 ### Create a New GitHub Repository Called lamp_server_setup
@@ -37,8 +37,8 @@ Today
 			5. git push -u origin master
 	- Note: git can be setup to automatically login with a push
 	- With https it can be set to only ask for a password every 8 hours, for example
-		- git config --global remote.origin.url https://{username}@github.com/{username}/{repo_name}
-	    - git config --global credential.helper 'cache --timeout=28000'
+		git config --global remote.origin.url https://{username}@github.com/{username}/{repo_name}
+	    git config --global credential.helper 'cache --timeout=28000'
 ---
 
 ### Check Your GitHub Repo
@@ -69,7 +69,7 @@ Today
 	
 	
 - Use SSH to login as root (use the emailed root password)
-	- ssh root@[your_server_ip_address]
+	ssh root@[your_server_ip_address]
 - Change the root password
 	- enter the old password
 	- enter the new password
@@ -99,19 +99,20 @@ Today
 ### Create SSH Keys Locally and Install Public Key on the server
 - Create SSH keys locally (if you already have keys created skip this step)
     - on your local computer from the terminal run
-    - ssh-keygen
-    - ssh-keygen should set folder permissions for ~/.ssh correctly but for reference:
+    ssh-keygen
+    ssh-keygen should set folder permissions for ~/.ssh correctly but for reference:
 	- Local .ssh folder permissions should be
-		- chmod 700 .ssh 
-		- chmod 644 id_rsa.pub 
-		- Your private key (id_rsa) should be 600 (-rw-------)
+		chmod 700 .ssh 
+		chmod 644 id_rsa.pub 
+		Your private key (id_rsa) should be 600 (-rw-------)
 ---
 		
 - Copy the public key to your new server
 	- either automatically with 
-		- ssh-copy-id [username]@[server_ip_address] (you will be prompted for the password)
+		ssh-copy-id [username]@[server_ip_address] 
+		- (you will be prompted for the password)
 	- or manually by using the terminal of the local machine and
-		- run: cat ~/.ssh/id_rsa.pub
+		cat ~/.ssh/id_rsa.pub
 		- copy the text (this is your public key) to your clipboard
 		- login to the remote server as root
 		- su to the second user (su - jimbo) for example if jimbo is the user you created 
@@ -125,14 +126,14 @@ Today
 - Ensure you can login to your new user with the SSH key
 	From the local machine ssh [seconduser]@[your_server_ip]
 - Disable the root login
-	- vi /etc/ssh/sshd_config
-	- find this line
-	- #PermitRootLogin yes
-	- remove the # which makes this line active
-	- change yes to no
-	- Enter :x then ENTER to save and exit the file
-	- reload ssh with this command:
-	- systemctl reload sshd
+	vi /etc/ssh/sshd_config
+	find this line
+	#PermitRootLogin yes
+	remove the # which makes this line active
+	change yes to no
+	Enter :x then ENTER to save and exit the file
+	reload ssh with this command:
+	systemctl reload sshd
 ---
 
 ## Part III Install Apache, MySQL (MariaDB), and Php
@@ -160,16 +161,16 @@ Today
 	- sudo systemctl enable mariadb.service
 	 
 - Install a base Php (you do not have to install the addtional modules)
-	- sudo yum install php php-mysql
-	- restart Apache by typing:
-	- sudo systemctl restart httpd.service
+	sudo yum install php php-mysql
+	restart Apache by typing:
+	sudo systemctl restart httpd.service
 	
 - You should not have to configure the firewall
 - Create Hello World php script (hw.php)
-	- sudo vi /var/www/html/info.php
-	- press i to insert into the file
-	- add <?php phpinfo(); ?> into the file
-	- press :x to save
+	sudo vi /var/www/html/info.php
+	press i to insert into the file
+	add <?php phpinfo(); ?> into the file
+	press :x to save
 ---
 
 ## Part IV Creating a Snapshot of your image
@@ -193,6 +194,7 @@ Today
 	sudo yum update
 	sudo yum install php-gd
 	sudo service httpd restart
+- Do you need wget ? yum install wget
 	sudo yum wget
 	cd ~
 	wget http://wordpress.org/latest.tar.gz
@@ -220,7 +222,7 @@ Today
 - finish setup
 - login as admin http://server_domain_name_or_IP/wp-admin
 
-Do you need wget ? yum install wget
+
 - Test Wordpress
 - Create Another Snapshot call it WordPressImage
 ---
