@@ -8,15 +8,14 @@ Today
 ### Create a Local Git Repo
 - Create a new repo on your laptop called docs
 	- Create a folder called docs
-	```
-	cd docs
-	git init to initialize the repository
-	copy this document into the repo
-	git status
-	git add *
-	git commit -m "First commit with lab guide"
-	```
---- 
+	
+    `cd docs`
+    git init to initialize the repository
+    copy this document into the repo
+    git status
+    git add *
+    git commit -m "First commit with lab guide"
+	--- 
 
 ### Create a New GitHub Repository Called lamp_server_setup
 - Under repositorys click the New button which is green
@@ -27,7 +26,7 @@ Today
 		- Create with readme
 		- Copy the url of the new GitHub repo by clicking the Clone or Download green button
 		- On your local computer change directories to the folder where you want to store your repo
-		`git clone <http://my.repo.address>`
+    git clone <http://my.repo.address>
 		- This copies your remote repository to a local repo
 		- Your local cloned repository will be set to use Github as a remote
 	- Create an empty repository with a readme
