@@ -26,6 +26,7 @@
         1. Create with readme
         2. Copy the url of the new GitHub repo by clicking the Clone or Download green button
         3. On your local computer change directories to the folder where you want to store your repo
+				
 				    ```
             git clone http://myrepoaddress/
             ```
