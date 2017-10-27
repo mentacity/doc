@@ -28,7 +28,7 @@ Today
 		2. Copy the url of the new GitHub repo by clicking the Clone or Download green button
 		3. On your local computer change directories to the folder where you want to store your repo
 ```
-git clone [http://my.repo.address>]
+git clone http://my.repo.address
 ```
 		    - This copies your remote repository to a local repo
 		    - Your local cloned repository will be set to use Github as a remote
