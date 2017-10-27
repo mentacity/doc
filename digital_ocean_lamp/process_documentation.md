@@ -39,7 +39,7 @@ git clone [http://my.repo.address>]
 				3. Copy the URL of the repository
 				4. Change into the directory of repo on the local machine
 				5. Add the remote origin and push
-			````
+			```
 			git remote add origin http://pathto/lamp_server_setup.git
 			git push -u origin master
 			```
