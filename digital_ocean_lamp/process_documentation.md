@@ -24,10 +24,10 @@
     - Create with a readme and clone the repository
         1. Create with readme
         2. Copy the url of the new GitHub repo by clicking the Clone or Download green button
-        3. On your local computer change directories to the folder where you want to store your repo
+        3. On your local computer change directories to the folder where you want to store your repo  
 ```
 git clone http://myrepoaddress/
-```
+```  
         4. This copies your remote repository to a local repo
         5. Your local cloned repository will be set to use Github as a remote
     - Create an empty repository
@@ -43,7 +43,7 @@ git push -u origin master
 	- With https it can be set to only ask for a password every 8 hours, for example
 	```
 		git config --global remote.origin.url https://{username}@github.com/{username}/{repo_name}
-	    git config --global credential.helper 'cache --timeout=28000'
+	  git config --global credential.helper 'cache --timeout=28000'
 	```
 ---
 
