@@ -8,12 +8,14 @@ Today
 ### Create a Local Git Repo
 - Create a new repo on your laptop called docs
 	- Create a folder called docs
-	`cd docs
+	```
+	cd docs
 	git init to initialize the repository
 	copy this document into the repo
 	git status
 	git add *
-	git commit -m "First commit with lab guide"`
+	git commit -m "First commit with lab guide"
+	```
 --- 
 
 ### Create a New GitHub Repository Called lamp_server_setup
