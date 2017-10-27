@@ -24,16 +24,16 @@ Today
 - Select Public or Private (public by default, private requires subscription)
 - Either
     - Create with a readme and clone the repository
-		1. Create with readme
-		2. Copy the url of the new GitHub repo by clicking the Clone or Download green button
-		3. On your local computer change directories to the folder where you want to store your repo
-```
-git clone http://my.repo.address
-```
+        1. Create with readme
+        2. Copy the url of the new GitHub repo by clicking the Clone or Download green button
+        3. On your local computer change directories to the folder where you want to store your repo
+        ```
+        git clone http://my.repo.address
+        ```
 		    - This copies your remote repository to a local repo
 		    - Your local cloned repository will be set to use Github as a remote
     - Create an empty repository
-	    - Copy the url of the new GitHub repo
+	      - Copy the url of the new GitHub repo
 				1. Click the link of your repository at the top of the page
 				2. Click the Clone or Download green button
 				3. Copy the URL of the repository
