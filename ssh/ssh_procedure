@@ -1,0 +1,8 @@
+https://cloud.digitalocean.com/support/suggestions?article=null&i=1b7d3c&page=1&query=(publickey)
+
+Generate public and private keys: ~/.ssh/id_rsa ~/.ssh/id_rsa.pub
+Add the key to the remote machine
+
+This process works for the root user as well.
+.ssh should be installed on the root home folder which is /root
+cd ~ works to move to root home folder
