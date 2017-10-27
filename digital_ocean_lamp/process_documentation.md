@@ -35,10 +35,10 @@
         2. Copy the URL of the repository
         3. Change into the directory of repo on the local machine
         4. Add the remote origin and push
-```
-git remote add origin http://pathto/lamp_server_setup.git
-git push -u origin master
-```
+				```
+				git remote add origin http://pathto/lamp_server_setup.git
+				git push -u origin master
+				```
 	- Note: git can be setup to automatically login with a push
 	- With https it can be set to only ask for a password every 8 hours, for example
 	```
