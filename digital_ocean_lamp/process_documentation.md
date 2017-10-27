@@ -24,19 +24,21 @@ Today
 - Select Public or Private (public by default, private requires subscription)
 - Either
     - Create with a readme and clone the repository
-		    - Create with readme
-		    - Copy the url of the new GitHub repo by clicking the Clone or Download green button
-		    - On your local computer change directories to the folder where you want to store your repo
+		1. Create with readme
+		2. Copy the url of the new GitHub repo by clicking the Clone or Download green button
+		3. On your local computer change directories to the folder where you want to store your repo
 ```
 git clone [http://my.repo.address>]
 ```
 		    - This copies your remote repository to a local repo
 		    - Your local cloned repository will be set to use Github as a remote
-	    - Create an empty repository with a readme
-    - Copy the url of the new GitHub repo
-		    1. Click the link of your repository at the top of the page
-	      2. Click the Clone or Download green button
-        3. Copy the URL of the repository  
+    - Create an empty repository
+	    - Copy the url of the new GitHub repo
+				1. Click the link of your repository at the top of the page
+				2. Click the Clone or Download green button
+				3. Copy the URL of the repository
+				4. Change into the directory of repo on the local machine
+				5. Add the remote origin and push
 			````
 			git remote add origin http://pathto/lamp_server_setup.git
 			git push -u origin master
