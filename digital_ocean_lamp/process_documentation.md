@@ -5,16 +5,15 @@
 ---
 
 ### Create a Local Git Repo
-- Create a new repo on your laptop called docs
-	- Create a folder called docs
+- Create a folder called docs
 ```
-	cd docs
-  git init to initialize the repository
-  copy this document into the repo
-  git status
-  git add *
-  git commit -m "First commit with lab guide"
-  ```
+    cd docs
+    git init to initialize the repository
+    copy this document into the repo
+    git status
+    git add *
+    git commit -m "First commit with lab guide"
+```  
 ---
 
 ### Create a New GitHub Repository Called lamp_server_setup
@@ -26,23 +25,20 @@
         1. Create with readme
         2. Copy the url of the new GitHub repo by clicking the Clone or Download green button
         3. On your local computer change directories to the folder where you want to store your repo
-
-				    ```
-            git clone http://myrepoaddress/
-            ```
-		    4. This copies your remote repository to a local repo
-		    5. Your local cloned repository will be set to use Github as a remote
+```
+git clone http://myrepoaddress/
+```
+        4. This copies your remote repository to a local repo
+        5. Your local cloned repository will be set to use Github as a remote
     - Create an empty repository
-		    - Copy the url of the new GitHub repo
-				    1. Click the link of your repository at the top of the page
-				    2. Click the Clone or Download green button
-				    3. Copy the URL of the repository
-				    4. Change into the directory of repo on the local machine
-				    5. Add the remote origin and push
-			```
-			git remote add origin http://pathto/lamp_server_setup.git
-			git push -u origin master
-			```
+        1. Click the link of your repository at the top of the page
+        2. Copy the URL of the repository
+        3. Change into the directory of repo on the local machine
+        4. Add the remote origin and push
+```
+git remote add origin http://pathto/lamp_server_setup.git
+git push -u origin master
+```
 	- Note: git can be setup to automatically login with a push
 	- With https it can be set to only ask for a password every 8 hours, for example
 	```
@@ -60,8 +56,8 @@ git clone [path_to_your_repo]
 - if so then you have successfully completed part I
 ---
 
-### Demo to Instructor that Part I is complete
-
+#### Demo to Instructor that Part I is complete
+---
 ## Part II Setup an Image in the Cloud (Digital Ocean Droplet)
 - Guide:
 ```
