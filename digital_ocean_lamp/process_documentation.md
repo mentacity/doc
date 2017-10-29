@@ -142,20 +142,23 @@ chmod 600 id_rsa
   ```
   cat ~/.ssh/id_rsa.pub
   ```
-    	- copy the text (this is your public key) to your clipboard
-    	- login to the remote server as root
-    	- su to the second user (su - jimbo) for example if jimbo is the user you created
-    	- run the following commands
-    ```
-    	mkdir .ssh
-    	chmod 700 .ssh
-    	vi .ssh/authorized_keys
-    ```
-    	- Enter :x then ENTER to save and exit the file.
-    ```
-    	chmod 600 .ssh/authorized_keys
-    	exit
-    ```
+  - copy the text (this is your public key) to your clipboard
+    - login to the remote server as root
+      - su to the second user 
+      ```
+      su [second_username]
+      ```
+      - run the following commands
+      ```
+      mkdir .ssh
+      chmod 700 .ssh
+      vi .ssh/authorized_keys
+      ```
+      - Enter :x then ENTER to save and exit the file.
+      ```
+      chmod 600 .ssh/authorized_keys
+      exit
+      ```
 - Ensure you can login to your new user with the SSH key
   From the local machine ssh
   ```
